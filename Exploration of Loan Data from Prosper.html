@@ -14259,9 +14259,20 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Exploration-of-Loan-Data-from-Prosper">Exploration of Loan Data from Prosper<a class="anchor-link" href="#Exploration-of-Loan-Data-from-Prosper">&#182;</a></h1><h2 id="My-First-Data-Analysis-Project"><em>My First Data Analysis Project</em><a class="anchor-link" href="#My-First-Data-Analysis-Project">&#182;</a></h2><h2 id="Preliminary-Wrangling">Preliminary Wrangling<a class="anchor-link" href="#Preliminary-Wrangling">&#182;</a></h2><blockquote><p>The loan data is from a peer-to-peer lending company called Prosper Marketplace which is based in San Francisco, USA. Not only can individual borrow money but also invest in personal loans. This project examines the data and connected variables about borrowers.</p>
+<h1 id="Exploration-of-Loan-Data-from-Prosper">Exploration of Loan Data from Prosper<a class="anchor-link" href="#Exploration-of-Loan-Data-from-Prosper">&#182;</a></h1><h2 id="My-First-Data-Analysis-Project"><em>My First Data Analysis Project</em><a class="anchor-link" href="#My-First-Data-Analysis-Project">&#182;</a></h2><h2 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h2><blockquote><p>The loan data is from a peer-to-peer lending company called Prosper Marketplace which is based in San Francisco, USA. Not only can individual borrow money but also invest in personal loans. This project examines the data and connected variables about borrowers.</p>
+</blockquote>
+<h2 id="Summary-of-Findings">Summary of Findings<a class="anchor-link" href="#Summary-of-Findings">&#182;</a></h2><blockquote><p>Thorough this project, I have investigated to find out how the unemployed borrowers fare, not only in securing a loan but in getting a fair deal in terms of loan terms and the interest rate. I have also looked into the number of overdue payments and compared these data with their monthly income and monthly loan payment. In conclusion, inspite the difference in the population size between the groups, one can observe similiarties between them as well.</p>
+</blockquote>
+<h2 id="Key-Insights-for-Presentation">Key Insights for Presentation<a class="anchor-link" href="#Key-Insights-for-Presentation">&#182;</a></h2><blockquote><p>There are 4 separate columns for employed individuals. It is not specified what the 'Employed' column details. Full-time, self-employed and part-time are also 'employed'. The assumption here is that the 'Not available' and 'Other' are borrowers who are students or simply borrowers who didn't wish to divulge further information.</p>
+<p>The raw data was examined in Excel to understand this column better. There were missing data and when it was indicated 'NA' in the employment status column actually had job titles in the occupation column. I will proceed to amalgamate all statuses deemed employed as one. This will increase the number of employed. As for the 'others' their classification will be based on their stated income. The OTHERS that have zero income will be classifed as Unemployed. There is a limitation to this assumption as welfare payment receivers are deemed as unemployed unless stated otherwise.</p>
+<p>As confirmed in the chart above, there are missing values or data in some of the columns. To find out how they are depicted on Excel, the original data was examined. As confirm, there are some missing values in these columns. Will employ 'fillna' method and in the Employment Status column, replaced NaN with 'No_Status'.</p>
 </blockquote>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Preliminary-Wrangling">Preliminary Wrangling<a class="anchor-link" href="#Preliminary-Wrangling">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -16104,13 +16115,22 @@ Plot 2 shows a better representation than the other two plots.</p>
 </blockquote>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="References:">References:<a class="anchor-link" href="#References:">&#182;</a></h3><blockquote><p><a href="https://www.prosper.com/invest#sec-3">https://www.prosper.com/invest#sec-3</a> <br />
+<a href="https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html">https://www.listendata.com/2019/07/how-to-filter-pandas-dataframe.html</a><br />
+<a href="https://en.wikipedia.org/wiki/Income_in_the_United_States">https://en.wikipedia.org/wiki/Income_in_the_United_States</a><br /></p>
+</blockquote>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert <span class="s2">&quot;Exploration of Loan Data from Prosper.ipynb&quot;</span> --to html --output-dir<span class="o">=</span><span class="s1">&#39;C:\Users\Ajeet\OneDrive\Projects\Blogging\ajeethaa.github.io&#39;</span> --allow-chromium-download
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert <span class="s2">&quot;Exploration of Loan Data from Prosper.ipynb&quot;</span> --to html --output-dir<span class="o">=</span><span class="s1">&#39;C:\Users\Ajeet\OneDrive\Projects\Blogging\ajeethaa.github.io&#39;</span>
 </pre></div>
 
      </div>
@@ -16132,68 +16152,8 @@ Plot 2 shows a better representation than the other two plots.</p>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
 <pre>C:\Users\Ajeet\anaconda3\lib\site-packages\traitlets\traitlets.py:2195: FutureWarning: Supporting extra quotes around Unicode is deprecated in traitlets 5.0. Use &#39;C:\\Users\\Ajeet\\OneDrive\\Projects\\Blogging\\ajeethaa.github.io&#39; instead of &#34;&#39;C:\\Users\\Ajeet\\OneDrive\\Projects\\Blogging\\ajeethaa.github.io&#39;&#34; – or use CUnicode.
   warn(
-[NbConvertApp] Converting notebook Exploration of Loan Data from Prosper.ipynb to webpdf
-[NbConvertApp] Building PDF
-[W:pyppeteer.chromium_downloader] start chromium download.
-Download may take a few minutes.
-
-  0%|          | 0/136913619 [00:00&lt;?, ?it/s]
-  1%|1         | 1495040/136913619 [00:00&lt;00:09, 13669145.72it/s]
-  3%|3         | 4648960/136913619 [00:00&lt;00:08, 16230050.83it/s]
-  6%|5         | 7997440/136913619 [00:00&lt;00:06, 18893216.24it/s]
-  9%|8         | 11868160/136913619 [00:00&lt;00:05, 21964810.94it/s]
- 11%|#1        | 15390720/136913619 [00:00&lt;00:05, 24281230.39it/s]
- 14%|#4        | 19210240/136913619 [00:00&lt;00:04, 26723848.72it/s]
- 17%|#6        | 23183360/136913619 [00:00&lt;00:03, 28973851.45it/s]
- 20%|#9        | 26920960/136913619 [00:00&lt;00:03, 30359331.26it/s]
- 22%|##1       | 30095360/136913619 [00:01&lt;00:03, 28677658.96it/s]
- 24%|##4       | 33085440/136913619 [00:01&lt;00:03, 25961441.57it/s]
- 26%|##6       | 35819520/136913619 [00:01&lt;00:04, 21823563.05it/s]
- 28%|##7       | 38205440/136913619 [00:01&lt;00:04, 20923741.38it/s]
- 30%|##9       | 40448000/136913619 [00:01&lt;00:05, 17715541.44it/s]
- 31%|###       | 42414080/136913619 [00:01&lt;00:06, 15707756.95it/s]
- 32%|###2      | 44165120/136913619 [00:01&lt;00:06, 13511549.72it/s]
- 33%|###3      | 45701120/136913619 [00:02&lt;00:06, 13666808.36it/s]
- 36%|###6      | 49336320/136913619 [00:02&lt;00:05, 16250961.23it/s]
- 38%|###7      | 51517440/136913619 [00:02&lt;00:04, 17206318.16it/s]
- 39%|###9      | 53729280/136913619 [00:02&lt;00:04, 18012337.68it/s]
- 41%|####      | 55695360/136913619 [00:02&lt;00:04, 16578250.29it/s]
- 42%|####1     | 57497600/136913619 [00:02&lt;00:04, 16547944.11it/s]
- 43%|####3     | 59248640/136913619 [00:02&lt;00:04, 16310034.35it/s]
- 45%|####4     | 60948480/136913619 [00:02&lt;00:04, 16071423.72it/s]
- 46%|####5     | 62607360/136913619 [00:03&lt;00:05, 12909360.73it/s]
- 49%|####8     | 66621440/136913619 [00:03&lt;00:04, 16025948.79it/s]
- 51%|#####1    | 70266880/136913619 [00:03&lt;00:03, 18098945.33it/s]
- 55%|#####4    | 75264000/136913619 [00:03&lt;00:02, 22103035.37it/s]
- 58%|#####7    | 79052800/136913619 [00:03&lt;00:02, 22705735.18it/s]
- 60%|######    | 82708480/136913619 [00:03&lt;00:02, 25122550.43it/s]
- 63%|######2   | 85667840/136913619 [00:03&lt;00:02, 25539423.62it/s]
- 65%|######4   | 88535040/136913619 [00:03&lt;00:02, 23740470.74it/s]
- 67%|######6   | 91156480/136913619 [00:04&lt;00:02, 17759530.17it/s]
- 68%|######8   | 93327360/136913619 [00:04&lt;00:02, 17639891.92it/s]
- 70%|######9   | 95375360/136913619 [00:04&lt;00:02, 16588687.87it/s]
- 72%|#######2  | 98590720/136913619 [00:04&lt;00:02, 19083144.98it/s]
- 74%|#######3  | 100782080/136913619 [00:04&lt;00:02, 16042644.14it/s]
- 76%|#######5  | 103424000/136913619 [00:04&lt;00:01, 17797501.38it/s]
- 77%|#######7  | 105728000/136913619 [00:04&lt;00:01, 18666207.99it/s]
- 79%|#######8  | 107786240/136913619 [00:05&lt;00:01, 18711557.64it/s]
- 80%|########  | 109793280/136913619 [00:05&lt;00:01, 18601529.13it/s]
- 82%|########1 | 111749120/136913619 [00:05&lt;00:01, 16891522.60it/s]
- 83%|########2 | 113541120/136913619 [00:05&lt;00:01, 12394978.58it/s]
- 86%|########5 | 117073920/136913619 [00:05&lt;00:01, 15206295.01it/s]
- 87%|########7 | 119644160/136913619 [00:05&lt;00:01, 16911782.04it/s]
- 89%|########8 | 121774080/136913619 [00:05&lt;00:00, 17606718.27it/s]
- 90%|######### | 123822080/136913619 [00:05&lt;00:00, 17927804.17it/s]
- 92%|#########1| 125818880/136913619 [00:06&lt;00:00, 17293384.82it/s]
- 93%|#########3| 127703040/136913619 [00:06&lt;00:00, 11728875.42it/s]
- 94%|#########4| 129218560/136913619 [00:06&lt;00:00, 11844860.12it/s]
- 99%|#########8| 135096320/136913619 [00:06&lt;00:00, 15460737.24it/s]
-100%|##########| 136913619/136913619 [00:06&lt;00:00, 20585610.38it/s]
-[W:pyppeteer.chromium_downloader] 
-chromium download done.
-[W:pyppeteer.chromium_downloader] chromium extracted to: C:\Users\Ajeet\AppData\Local\pyppeteer\pyppeteer\local-chromium\588429
-[NbConvertApp] PDF successfully created
-[NbConvertApp] Writing 600690 bytes to C:\Users\Ajeet\OneDrive\Projects\Blogging\ajeethaa.github.io\Exploration of Loan Data from Prosper.pdf
+[NbConvertApp] Converting notebook Exploration of Loan Data from Prosper.ipynb to html
+[NbConvertApp] Writing 1193051 bytes to C:\Users\Ajeet\OneDrive\Projects\Blogging\ajeethaa.github.io\Exploration of Loan Data from Prosper.html
 </pre>
 </div>
 </div>
