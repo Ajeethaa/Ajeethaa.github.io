@@ -1,2 +1,2 @@
-Ajeethaa's Adventures in Data Analytics
+Ajeethaa's Adventure in Data Analytics
 
